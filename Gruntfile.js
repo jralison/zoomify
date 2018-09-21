@@ -34,20 +34,10 @@ module.exports = function(grunt) {
 					'dist/zoomify.min.css': ['dist/zoomify.css']
 				}
 			}
-		},
-		'sync-json': {
-			options: {
-				include: ['name', 'description', 'version']
-			},
-			bower: {
-				files: {
-					"bower.json": "package.json"
-				}
-			}
 		}
 	});
 	
 	// Default tasks.
-	grunt.registerTask('default', ['copy', 'uglify', 'cssmin', 'sync-json']);
+	grunt.registerTask('default', ['copy', 'uglify', 'cssmin']);
 	
 };
